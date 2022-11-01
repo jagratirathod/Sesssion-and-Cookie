@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Get session</title>
+</head>
+<body>
+    <h1>Get Session here !</h1>
+    {{name}} <br> <hr>
+{% comment %}     
+    {% for key in  request.session.keys %}
+    {{key}} {% endcomment %}
+
+    {% comment %} {% for key in keys %}
+    {{key}}
+    {% endfor %} <br> <hr>
+
+    {% for item in items %}
+    {{item}}
+    {% endfor %}  <br><hr>
+
+    {% for value in values %}
+    {{value}}
+    {% endfor %} <br><hr>
+
+    {% for key,value in items %}
+    {{key}} 
+    {{value}} <br>
+    {% endfor %} <br><hr> {% endcomment %}
+
+{{request.session.get_session_cookie_age}}  <br>
+{{request.session.get_expiry_age}}          <br>
+{{request.session.get_expiry_date}}         <br>
+{{request.session.get_expire_at_browser_close}} <br>
+
+
+</body>
+</html>
